@@ -1,0 +1,4 @@
+#Fri Nov 01 14:38:38 CST 2019
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=HAL_Delay
