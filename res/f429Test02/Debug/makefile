@@ -37,8 +37,8 @@ f429Test02.list \
 all: f429Test02.elf secondary-outputs
 
 # Tool invocations
-f429Test02.elf: $(OBJS) $(USER_OBJS) E:\code\STM32CubeIDE\f429Test02\STM32F429IGTX_FLASH.ld
-	arm-none-eabi-gcc -o "f429Test02.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"E:\code\STM32CubeIDE\f429Test02\STM32F429IGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f429Test02.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+f429Test02.elf: $(OBJS) $(USER_OBJS) E:\code\STM32CubeIDE\res\f429Test02\STM32F429IGTX_FLASH.ld
+	arm-none-eabi-gcc -o "f429Test02.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"E:\code\STM32CubeIDE\res\f429Test02\STM32F429IGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f429Test02.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
