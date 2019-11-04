@@ -1,0 +1,4 @@
+#Mon Nov 04 17:11:45 CST 2019
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=\ \= HAL_GPIO_WritePin

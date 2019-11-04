@@ -1,10 +1,40 @@
-20:56:19 **** Incremental Build of configuration Debug for project f429Test02 ****
+22:14:28 **** Incremental Build of configuration Debug for project f429Test02 ****
 make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:157:0,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:29,
+                 from ../Inc/stm32f4xx_hal_conf.h:232,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Inc/main.h:31,
+                 from ../Src/main.c:26:
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f429xx.h:68:0: warning: "__FPU_PRESENT" redefined
+ #define __FPU_PRESENT             1U       /*!< FPU present                                   */
+ 
+../Src/main.c:21:0: note: this is the location of the previous definition
+ #define __FPU_PRESENT = 1
+ 
+../Src/main.c:64:9: warning: return type of 'main' is not 'int' [-Wmain]
+ int32_t main(void)
+         ^~~~
+../Src/main.c: In function 'main':
+../Src/main.c:78:17: warning: unused variable 'sinOutput_test' [-Wunused-variable]
+       float32_t sinOutput_test = sinOutput;
+                 ^~~~~~~~~~~~~~
+../Src/main.c:76:17: warning: unused variable 'cosOutput_test' [-Wunused-variable]
+       float32_t cosOutput_test = cosOutput;
+                 ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "f429Test02.elf" @"objects.list" E:/code/STM32CubeIDE/f429Test02/Lib/GCC/libarm_cortexM4lf_math.a  -mcpu=cortex-m4 -T"E:\code\STM32CubeIDE\f429Test02\STM32F429IGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f429Test02.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: f429Test02.elf
+ 
+arm-none-eabi-objdump -h -S  f429Test02.elf  > "f429Test02.list"
 arm-none-eabi-size   f429Test02.elf 
    text	   data	    bss	    dec	    hex	filename
-   6000	     20	   1572	   7592	   1da8	f429Test02.elf
+   8944	     24	   1592	  10560	   2940	f429Test02.elf
 Finished building: default.size.stdout
  
+Finished building: f429Test02.list
+ 
 
-20:56:20 Build Finished. 0 errors, 0 warnings. (took 612ms)
+22:14:33 Build Finished. 0 errors, 4 warnings. (took 4s.353ms)
 

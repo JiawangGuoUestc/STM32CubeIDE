@@ -1,0 +1,7 @@
+1572854840325	Delete resource 'ALIENTEK_STM32F429'
+1572873729616	Delete resource 'f429Test02/Lib/ARMCMx.ld'
+1572873823998	Delete resource 'f429Test02/Src/system_ARMCM4.c'
+1572873835763	Delete resource 'f429Test02/Startup/startup_ARMCM4.S'
+1572873845425	Delete resource 'f429Test02/ARMCMx.ld'
+1572873888454	Delete resource 'f429Test02/Inc/arm_const_structs.h'
+1572873923860	Delete resource 'f429Test02/Src/arm_fft_bin_data.c'
